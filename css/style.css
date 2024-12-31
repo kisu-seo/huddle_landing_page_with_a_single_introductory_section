@@ -124,6 +124,7 @@ meter {
 
     --primary-color: #684bb1;
     --secondary-color: #fff;
+    --hover-color: #e880e8;
 }
 
 html {
@@ -138,6 +139,10 @@ body {
     width: 375px;
     background-color: var(--primary-color);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .header__img {
@@ -192,4 +197,119 @@ body {
     align-items: center;
     margin: 0 auto 64px;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10.49px;
+    margin-bottom: 40px;
+}
+
+.icon-link {
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-link svg {
+    width: 13px;
+    height: 13px;
+}
+
+.icon-link svg path {
+    fill: var(--secondary-color);
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        background: url(../images/bg-desktop.svg) no-repeat;
+        background-size: contain;
+        width: 1440px;
+        background-color: var(--primary-color);
+    }
+
+    .header__img {
+        width: 200px;
+        margin: 64px 0 104px 80px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .section__img {
+        width: 696px;
+        height: 493px;
+        margin: 0;
+    }
+
+    .container {
+        width: 520px;
+        margin: 0 0 0 59px;
+        padding-top: 32px;
+    }
+
+    .container__text {
+        text-align: left;
+    }
+
+    .container__text h1 {
+        font-size: 40px;
+        line-height: 60px;
+        margin-bottom: 24px;
+    }
+
+    .container__text p {
+        font-size: 18px;
+        line-height: 27px;
+        margin-bottom: 24px;
+    }
+
+    .container__button {
+        margin: 0;
+        height: 56px;
+        border-radius: 28px;
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    .container__button:hover {
+        background-color: var(--hover-color);
+        cursor: pointer;
+        color: var(--secondary-color);
+    }
+
+    footer {
+        margin: 27px 0 40px;
+        padding-right: 80px;
+        justify-content: flex-end;
+        gap: 16px;
+    }
+
+    .icon-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-link svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .icon-link:hover {
+        border-color: var(--hover-color);
+        cursor: pointer;
+    }
+
+    .icon-link:hover svg path {
+        fill: var(--hover-color);
+    }
 }
